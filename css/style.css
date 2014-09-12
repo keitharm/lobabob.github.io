@@ -35,7 +35,10 @@ header nav {
     float: right;
     padding-right:12px;
 }
-.slider nav {width:100%;}
+.slider nav {
+    z-index:200;
+    width:100%;
+}
 nav a {
     display: block;
     float: left;
@@ -51,6 +54,7 @@ nav a {
 }
 header nav a {margin: 20px 0px 0px 5px;}
 header nav a:not([href^="#"]) {margin-top:15px;}
+.slider nav a {margin: 10px 12% 0 5px;}
 
 nav a.active {
     background: #8dc63f;
@@ -149,15 +153,22 @@ header > .container {padding-left: 10px;z-index: 200;}
 .slider {
     position: fixed;
     height: 100%;
-    width: 200px;
+    width: 160px;
     top: 70px;   /* Should be the same as header outer height minus border-top width */
-    right: -200px;    /*Should be negative width*/
+    right: -160px;    /*Should be negative width*/
 
     border-top:5px solid #8dc63f;
     background: #3d4351;
 
     transition: all .25s;
     z-index: 150; /* Should be higher than header */
+}
+.slider hr {
+    position:relative;
+    top:5px;
+    margin-left:5%;
+    width:90%;
+    margin-bottom:0;
 }
 
 .slide-out {
@@ -211,6 +222,7 @@ section {
 @media all and (max-width: 630px) {
     .mobile-sm {display:initial !important;}
     header nav a {display:none;}
+    .slider hr {display:block !important;}
 }
 
 /*@media all and (max-width: 395px) {}*/
