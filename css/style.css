@@ -1,0 +1,216 @@
+::selection {
+    color: #000;
+    background-color: #8dc63f;
+}
+
+body {
+    font-family: helvetica;
+    background-color: #fff;
+    width: 100%;
+    padding-top: 75px;  /* Should be the same as header outer height */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    -moz-box-shadow: 0 1px 5px 0px #333;
+    -webkit-box-shadow: 0 1px 5px 0px #333;
+    box-shadow: 0 1px 5px 0px #333;
+    background: #3d4351;
+    clear: both;
+    z-index: 100;
+
+    border-top:5px solid #8dc63f;
+}
+
+nav {
+    position: relative;
+    height: 100%;
+}
+header nav {
+    float: right;
+    padding-right:12px;
+}
+.slider nav {width:100%;}
+nav a {
+    display: block;
+    float: left;
+
+    padding:5px;
+    border-radius:5px;
+
+    text-decoration: none;
+    color: #ccc;
+    font-size: 20px;
+    
+    transition: all .25s;
+}
+header nav a {margin: 20px 0px 0px 5px;}
+header nav a:not([href^="#"]) {margin-top:15px;}
+
+nav a.active {
+    background: #8dc63f;
+    font-weight:bold;
+    color: #444;
+}
+nav a:not(.active):hover {
+    color: #8dc63f;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.1);
+    background-color: #252525;
+}
+
+section:nth-child(even) {
+    background-color: #f9f9f9;
+}
+footer {
+    height:60px;
+    width:100%;
+}
+
+.vertical-divider {
+    position: absolute;
+    top:5%;
+    right:211px;
+    height:90%;
+    border-right:1px solid #1b212f;
+    border-left:1px solid #5f6573;
+    width:0px;
+}
+
+.overlay::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .15;
+    background-image: url("../img/texture-overlay.png");
+}
+
+.fa {font-size:30px;}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    height: 100%;
+}
+header > .container {padding-left: 10px;z-index: 200;}
+
+.logo a {
+    float: left;
+    text-decoration: none;
+}
+
+/*.profile {
+    float: left;
+    margin-top: 5px;
+    border:3px solid #8dc63f;
+}
+.profile, .profile > img {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    width: 90px;
+    height: 90px;
+}*/
+
+.profile, .profile > img {
+    float: left;
+    margin-top:5px;
+    padding-right:5px;
+    width: 30px;
+    height: 45px;
+}
+
+.name {
+    float: left;
+    padding-left: 5px;
+    margin-top: 20px;
+
+    font-size: 29px;
+    letter-spacing: 3px;
+    /*text-shadow:0 1px 3px rgba(0, 0, 0, 0.5);*/
+
+    transition: all .25s;
+    color: #fff;
+}
+
+.slider {
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    top: 70px;   /* Should be the same as header outer height minus border-top width */
+    right: -200px;    /*Should be negative width*/
+
+    border-top:5px solid #8dc63f;
+    background: #3d4351;
+
+    transition: all .25s;
+    z-index: 150; /* Should be higher than header */
+}
+
+.slide-out {
+    -moz-box-shadow: 0 5px 5px 0px #333;
+    -webkit-box-shadow: 0 5px 5px 0px #333;
+    box-shadow: 0 5px 5px 0px #333;
+
+    right: 0;
+}
+
+
+
+
+
+
+section {
+    /* for testing */
+    height: 600px;
+}
+
+
+
+
+/********************************* Viewport styling *********************************/
+
+
+
+.mobile-lg, .mobile-md, .mobile-sm {
+    display:none;
+}
+
+/**** Extra styles for big screens *****/
+@media all and (min-width: 930px) {
+    /*Might not need this as default styles above are already for desktop*/
+}
+
+/************ Mobile Styles ***********/
+@media all and (max-width: 930px) {
+    .mobile-lg {display:initial !important;}
+    .vertical-divider, header nav a:not([href^="#"]) {display:none;}
+}
+
+@media all and (max-width: 767px) {
+    .mobile-md {display:initial !important;}
+    .name {
+        margin-top:5px;
+        font-size:;
+    }
+}
+
+@media all and (max-width: 630px) {
+    .mobile-sm {display:initial !important;}
+    header nav a {display:none;}
+}
+
+/*@media all and (max-width: 395px) {}*/
