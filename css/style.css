@@ -222,7 +222,7 @@ header > .container {padding-left: 10px;z-index: 200;}
 html,body {height:100%;}
 section {
     /*min-height: 600px;*/
-    height:100%;
+    height: calc(100% - 75px);;
 }
 
 
