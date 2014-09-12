@@ -2,7 +2,7 @@
     color: #000;
     background-color: #8dc63f;
 }
-
+html {height:100%;}
 body {
     font-family: helvetica;
     background-color: #fff;
@@ -56,6 +56,7 @@ header nav a {margin: 20px 0px 0px 5px;}
 header nav a:not([href^="#"]) {margin-top:15px;}
 .slider nav a {margin: 10px 12% 0 5px;}
 
+header nav a.active {margin-top: 19px;}
 nav a.active {
     background: #8dc63f;
     font-weight:bold;
@@ -78,12 +79,13 @@ footer {
 .vertical-divider {
     position: absolute;
     top:5%;
-    right:211px;
+    right:217px;
     height:90%;
     border-right:1px solid #1b212f;
     border-left:1px solid #5f6573;
     width:0px;
 }
+.right-divider {margin-left:12px;}
 
 .overlay::after {
     content: "";
@@ -150,6 +152,37 @@ header > .container {padding-left: 10px;z-index: 200;}
     color: #fff;
 }
 
+.slide-btn {
+    float: right;
+
+    width:40px;
+    height:40px;
+
+    padding:5px;
+    margin:10px -2px 0 15px;
+
+    text-decoration: none;
+    color: #ccc;
+    
+    background:#8dc63f;
+}
+.slide-btn > .top-bar, .slide-btn > .mid-bar, .slide-btn > .bot-bar {
+    width:;
+    height:;
+    transition: all .25s;
+    background:;
+    border-radius:;
+}
+.slide-btn > .top-bar {
+    
+}
+.slide-btn > .mid-bar {
+    
+}
+.slide-btn > .bot-bar {
+    
+}
+
 .slider {
     position: fixed;
     height: 100%;
@@ -186,7 +219,7 @@ header > .container {padding-left: 10px;z-index: 200;}
 
 section {
     /* for testing */
-    height: 600px;
+    min-height: 100%;
 }
 
 
@@ -213,16 +246,11 @@ section {
 
 @media all and (max-width: 767px) {
     .mobile-md {display:initial !important;}
-    .name {
-        margin-top:5px;
-        font-size:;
-    }
+    .name {margin-top:6px;}
 }
 
-@media all and (max-width: 630px) {
+@media all and (max-width: 640px) {
     .mobile-sm {display:initial !important;}
     header nav a {display:none;}
     .slider hr {display:block !important;}
 }
-
-/*@media all and (max-width: 395px) {}*/
