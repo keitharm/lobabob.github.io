@@ -70,7 +70,7 @@
         </div>
 
         
-        <section id="about" data-panel="home">
+        <section id="about" data-panel="about">
             <div class="container">a</div>
         </section>
 
@@ -86,26 +86,26 @@
         </footer>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <!--<script src="js/jquery.panelSnap.js"></script>-->
+        <script src="js/jquery.panelSnap.js"></script>
         <script>
             jQuery(function($) {
                 
 
 
 
-            //     $('body').panelSnap({
-            //         $menu: $('.container'),
-            //         menuSelector: 'a',
-            //         panelSelector: 'section',
-            //         directionThreshold: 100,
-            //         slideSpeed: 200,
-            //         keyboardNavigation: {
-            //             enabled: true,
-            //             nextPanelKey: 40,
-            //             previousPanelKey: 38,
-            //             wrapAround: true
-            //         }
-            //     });
+                $('body').panelSnap({
+                    $menu: $('nav'),
+                    menuSelector: 'a',
+                    panelSelector: 'section',
+                    directionThreshold: 50,
+                    slideSpeed: 200,
+                    keyboardNavigation: {
+                        enabled: true,
+                        nextPanelKey: 40,
+                        previousPanelKey: 38,
+                        wrapAround: true
+                    }
+                });
             });
         </script>
     </body>
