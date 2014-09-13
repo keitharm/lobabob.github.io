@@ -44,9 +44,11 @@
                     <a href="files/resume.pdf"><i class="fa fa-file-o"></i> Resume</a>
 
                     <div id="slide-btn" class="mobile-lg">
-                        <span class="top-bar"></span>
-                        <span class="mid-bar"></span>
-                        <span class="bot-bar"></span>
+                        <div>
+                            <div class="top-bar"></div>
+                            <div class="mid-bar"></div>
+                            <div class="bot-bar"></div>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -91,26 +93,19 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>-->
         <script>
             jQuery(function($) {
+                // Menu
                 $('#slide-btn').click(function() {
-                    var menu = document.getElementById('slide-menu'),
-                        $menu = $('#slide-menu');
+                    var $slide = $('body');
 
-                    $menu.toggleClass('slide-out');
+                    $slide.toggleClass('slide-out');
 
-                    if($('#slide-menu').hasClass('slide-out')) {
-                        //TweenMax.killAll();
-                        //TweenMax.to(menu, .7, {right:"0",ease:Circ.easeOut});
-
+                    if($slide.hasClass('slide-out')) {
                         $('body').on('click',':not(#slide-menu, #slide-menu *, header, header *)', function() {
-                            $menu.removeClass('slide-out');
-                            //TweenMax.killAll();
-                            //TweenMax.to(menu, .7, {right: "-"+menu.offsetWidth,ease:Circ.easeOut});
+                            $slide.removeClass('slide-out');    // Close slide-menu from clicking outside menu
                         });
                     }
                     else {
                         $('body').off('click',':not(#slide-menu, #slide-menu *, header, header *)');
-                        //TweenMax.killAll();
-                        //TweenMax.to(menu, .7, {right: "-"+menu.offsetWidth,ease:Circ.easeOut});
                     }
                 });
 
