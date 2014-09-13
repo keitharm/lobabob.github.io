@@ -70,14 +70,13 @@
                 </span>
             </nav>
         </div>
-
         
         <section id="about" data-panel="about">
-            <div class="container">a</div>
+            <div class="container">aadsfasdfasdf</div>
         </section>
 
         <section id="projects" data-panel="projects">
-            <div class="container">b</div>
+            <div class="container">bfdafdasfda</div>
         </section>
 
         <section id="contact" data-panel="contact">
@@ -88,12 +87,28 @@
         </footer>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="js/jquery.panelSnap.js"></script>
-        <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>-->
         <script>
             jQuery(function($) {
-                // Menu
+                $('a[href^="#"]').on('click',function (e) {
+                    e.preventDefault();
+
+                    if(!$(this).hasClass('active')) {
+                        $('.active').removeClass('active');
+                        $('a[href="'+this.hash+'"]').addClass('active');
+                    }
+                        
+
+                    $target = $(this.hash);
+
+                    $('html, body').stop().animate({
+                        'scrollTop':$target.offset().top-75
+                    }, 350, 'swing', function() {
+                        window.location.hash = $target.selector;
+                    });
+                });
+
+
+                // Slider Menu
                 $('#slide-btn').click(function() {
                     var $slide = $('body');
 
@@ -108,36 +123,6 @@
                         $('body').off('click',':not(#slide-menu, #slide-menu *, header, header *)');
                     }
                 });
-
-
-
-                // $('body').panelSnap({
-                //     $menu: $('header nav'),
-                //     menuSelector: 'a',
-                //     panelSelector: 'section',
-                //     directionThreshold: 50,
-                //     slideSpeed: 200,
-                //     keyboardNavigation: {
-                //         enabled: true,
-                //         nextPanelKey: 40,
-                //         previousPanelKey: 38,
-                //         wrapAround: true
-                //     }
-                // });
-
-                // $('body').panelSnap({
-                //     $menu: $('#slider-menu nav'),
-                //     menuSelector: 'a',
-                //     panelSelector: 'section',
-                //     directionThreshold: 50,
-                //     slideSpeed: 200,
-                //     keyboardNavigation: {
-                //         enabled: true,
-                //         nextPanelKey: 40,
-                //         previousPanelKey: 38,
-                //         wrapAround: true
-                //     }
-                // });
             });
         </script>
     </body>
