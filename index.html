@@ -87,19 +87,33 @@
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="js/jquery.panelSnap.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
         <script>
             jQuery(function($) {
                 $('.slide-btn').click(function() {
-                    $('#slide-menu').toggleClass('slide-out');
+                    var menu = document.getElementById('slide-menu'),
+                        $menu = $('#slide-menu');
+                        // slideOut = new TweenMax(menu, .25, {right:"-"+menu.offsetWidth}),
+                        // slideIn = new TweenMax(menu, .25, {right:"0"});
 
-                    var menu = document.getElementById('slide-menu');
+                    $menu.toggleClass('slide-out');
 
-                    if($('#slide-menu').hasClass('slide-out'))
-                        TweenLite.to(menu, .25, {right:"0"});
-                    else
-                        TweenLite.to(menu, .25, {right: "-"+menu.offsetWidth});
+                    if($('#slide-menu').hasClass('slide-out')) {
+                        TweenMax.killAll();
+                        TweenMax.to(menu, .25, {right:"0"});
+
+                        $('body').on('click',':not(#slide-menu, #slide-menu *, header, header *)', function() {
+                            $menu.removeClass('slide-out');
+                            TweenMax.killAll();
+                            TweenMax.to(menu, .25, {right: "-"+menu.offsetWidth});
+                        });
+                    }
+                    else {
+                        $('body').off('click',':not(#slide-menu, #slide-menu *, header, header *)');
+                        TweenMax.killAll();
+                        TweenMax.to(menu, .25, {right: "-"+menu.offsetWidth});
+                    }
                 });
 
 
@@ -119,7 +133,7 @@
                 // });
 
                 // $('body').panelSnap({
-                //     $menu: $('.slider nav'),
+                //     $menu: $('#slider-menu nav'),
                 //     menuSelector: 'a',
                 //     panelSelector: 'section',
                 //     directionThreshold: 50,
