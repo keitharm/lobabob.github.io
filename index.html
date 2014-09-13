@@ -51,7 +51,7 @@
                 </nav>
             </div>
         </header>
-        <div class="mobile-lg overlay slider slide-out">
+        <div class="mobile-lg overlay slider">
             <nav>
                 <span class="mobile-sm">
                     <a href="#about" class="active" data-panel="about">About Me</a>
@@ -89,23 +89,25 @@
         <script src="js/jquery.panelSnap.js"></script>
         <script>
             jQuery(function($) {
-                
-
-
-
-                $('body').panelSnap({
-                    $menu: $('header nav'),
-                    menuSelector: 'a',
-                    panelSelector: 'section',
-                    directionThreshold: 50,
-                    slideSpeed: 200,
-                    keyboardNavigation: {
-                        enabled: true,
-                        nextPanelKey: 40,
-                        previousPanelKey: 38,
-                        wrapAround: true
-                    }
+                $('.slide-btn').click(function() {
+                    $('.slider').toggleClass('slide-out');
                 });
+
+
+
+                // $('body').panelSnap({
+                //     $menu: $('header nav'),
+                //     menuSelector: 'a',
+                //     panelSelector: 'section',
+                //     directionThreshold: 50,
+                //     slideSpeed: 200,
+                //     keyboardNavigation: {
+                //         enabled: true,
+                //         nextPanelKey: 40,
+                //         previousPanelKey: 38,
+                //         wrapAround: true
+                //     }
+                // });
 
                 // $('body').panelSnap({
                 //     $menu: $('.slider nav'),
