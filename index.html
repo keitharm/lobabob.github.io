@@ -51,7 +51,7 @@
                 </nav>
             </div>
         </header>
-        <div id="slider" class="mobile-lg overlay">
+        <div id="slide-menu" class="mobile-lg overlay">
             <nav>
                 <span class="mobile-sm">
                     <a href="#about" class="active" data-panel="about">About Me</a>
@@ -92,14 +92,14 @@
         <script>
             jQuery(function($) {
                 $('.slide-btn').click(function() {
-                    $('#slider').toggleClass('slide-out');
+                    $('#slide-menu').toggleClass('slide-out');
 
-                    var slider = document.getElementById('slider');
+                    var menu = document.getElementById('slide-menu');
 
-                    if($('#slider').hasClass('slide-out'))
-                        TweenLite.to(slider, .25, {right:"0"});
+                    if($('#slide-menu').hasClass('slide-out'))
+                        TweenLite.to(menu, .25, {right:"0"});
                     else
-                        TweenLite.to(slider, .25, {right: "-"+slider.offsetWidth});
+                        TweenLite.to(menu, .25, {right: "-"+menu.offsetWidth});
                 });
 
 

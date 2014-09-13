@@ -49,7 +49,7 @@ header nav {
     float: right;
     padding-right:12px;
 }
-.slider nav {
+#slide-menu nav {
     z-index:200;
     width:100%;
 }
@@ -68,7 +68,7 @@ nav a {
 }
 header nav a {margin: 20px 0px 0px 5px;}
 header nav a:not([href^="#"]) {margin-top:15px;}
-.slider nav a {margin: 10px 12% 0 5px;}
+#slide-menu nav a {margin: 10px 12% 0 5px;}
 
 header nav a.active {margin-top: 19px;}
 nav a.active {
@@ -191,7 +191,7 @@ header > .container {padding-left: 10px;z-index: 200;}
     
 }
 
-#slider {
+#slide-menu {
     position: fixed;
     height: 100%;
     width: 160px;
@@ -203,7 +203,7 @@ header > .container {padding-left: 10px;z-index: 200;}
 
     z-index: 150; /* Should be higher than header */
 }
-.slider hr {
+#slide-menu hr {
     position:relative;
     top:5px;
     margin-left:5%;
@@ -258,5 +258,5 @@ section {
 @media all and (max-width: 640px) {
     .mobile-sm {display:initial !important;}
     header nav a {display:none;}
-    .slider hr {display:block !important;}
+    #slide-menu hr {display:block !important;}
 }
