@@ -191,7 +191,7 @@ header > .container {padding-left: 10px;z-index: 200;}
     
 }
 
-.slider {
+#slider {
     position: fixed;
     height: 100%;
     width: 160px;
@@ -201,7 +201,6 @@ header > .container {padding-left: 10px;z-index: 200;}
     border-top:5px solid #8dc63f;
     background: #3d4351;
 
-    transition: all .25s;
     z-index: 150; /* Should be higher than header */
 }
 .slider hr {
@@ -216,8 +215,6 @@ header > .container {padding-left: 10px;z-index: 200;}
     -moz-box-shadow: 0 5px 5px 0px #333;
     -webkit-box-shadow: 0 5px 5px 0px #333;
     box-shadow: 0 5px 5px 0px #333;
-
-    right: 0;
 }
 
 

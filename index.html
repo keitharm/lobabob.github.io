@@ -51,7 +51,7 @@
                 </nav>
             </div>
         </header>
-        <div class="mobile-lg overlay slider">
+        <div id="slider" class="mobile-lg overlay">
             <nav>
                 <span class="mobile-sm">
                     <a href="#about" class="active" data-panel="about">About Me</a>
@@ -87,10 +87,19 @@
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="js/jquery.panelSnap.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
         <script>
             jQuery(function($) {
                 $('.slide-btn').click(function() {
-                    $('.slider').toggleClass('slide-out');
+                    $('#slider').toggleClass('slide-out');
+
+                    var slider = document.getElementById('slider');
+
+                    if($('#slider').hasClass('slide-out'))
+                        TweenLite.to(slider, .25, {right:"0"});
+                    else
+                        TweenLite.to(slider, .25, {right: "-"+slider.offsetWidth});
                 });
 
 
