@@ -99,18 +99,18 @@
 
                     if($('#slide-menu').hasClass('slide-out')) {
                         TweenMax.killAll();
-                        TweenMax.to(menu, .4, {right:"0"});
+                        TweenMax.to(menu, .7, {right:"0",ease:Circ.easeOut});
 
                         $('body').on('click',':not(#slide-menu, #slide-menu *, header, header *)', function() {
                             $menu.removeClass('slide-out');
                             TweenMax.killAll();
-                            TweenMax.to(menu, .4, {right: "-"+menu.offsetWidth});
+                            TweenMax.to(menu, .7, {right: "-"+menu.offsetWidth,ease:Circ.easeOut});
                         });
                     }
                     else {
                         $('body').off('click',':not(#slide-menu, #slide-menu *, header, header *)');
                         TweenMax.killAll();
-                        TweenMax.to(menu, .4, {right: "-"+menu.offsetWidth});
+                        TweenMax.to(menu, .7, {right: "-"+menu.offsetWidth,ease:Circ.easeOut});
                     }
                 });
 
