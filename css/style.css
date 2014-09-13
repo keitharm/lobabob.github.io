@@ -25,12 +25,14 @@ header {
     top: 0;
     width: 100%;
     height: 70px;
+
     -moz-box-shadow: 0 1px 5px 0px #333;
     -webkit-box-shadow: 0 1px 5px 0px #333;
     box-shadow: 0 1px 5px 0px #333;
+
     background: #3d4351;
     clear: both;
-    z-index: 100;
+    z-index: 1000;
 
     border-top:5px solid #8dc63f;
 }
@@ -44,7 +46,7 @@ header nav {
     padding-right:12px;
 }
 #slide-menu nav {
-    z-index:200;
+    z-index:2500;
     width:100%;
 }
 nav a {
@@ -52,13 +54,14 @@ nav a {
     float: left;
 
     padding:5px;
+
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
     border-radius:5px;
 
     text-decoration: none;
     color: #ccc;
     font-size: 20px;
-    
-    /*transition: all .25s;*/
 }
 header nav a {margin: 20px 0px 0px 5px;}
 header nav a:not([href^="#"]) {margin-top:15px;}
@@ -71,10 +74,18 @@ nav a.active {
     font-weight:bold;
     color: #444;
 }
-nav a:hover {transition: all .25s;}
+nav a:hover {
+    -moz-transition: all .25s
+    -webkit-transition: all .25s
+    transition: all .25s;
+}
 nav a:not(.active):hover {
     color: #8dc63f;
+
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.1);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.1);
+    
     background-color: #252525;
 }
 
@@ -110,7 +121,7 @@ nav a:not(.active):hover {
     margin: 0 auto;
     height: 100%;
 }
-header > .container {padding-left: 10px;z-index: 200;}
+header > .container {padding-left: 10px;z-index: 1500;}
 
 .logo a {
     float: left;
@@ -148,9 +159,15 @@ header > .container {padding-left: 10px;z-index: 200;}
 
     font-size: 29px;
     letter-spacing: 3px;
-    /*text-shadow:0 1px 3px rgba(0, 0, 0, 0.5);*/
 
+    -moz-text-shadow:0 1px 3px rgba(0, 0, 0, 0.5);
+    -webkit-text-shadow:0 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow:0 1px 3px rgba(0, 0, 0, 0.5);
+
+    -moz-transition: all .25s;
+    -webkit-transition: all .25s;
     transition: all .25s;
+
     color: #fff;
 }
 
@@ -174,6 +191,9 @@ header > .container {padding-left: 10px;z-index: 200;}
     width:25px;
 
     margin:15px auto 0 auto;
+
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 #slide-btn .top-bar, #slide-btn .mid-bar, #slide-btn .bot-bar {
@@ -181,16 +201,33 @@ header > .container {padding-left: 10px;z-index: 200;}
     width:100%;
     height:3px;
     background:#3d4351;
+
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
     border-radius:1px;
+
+    -moz-transition:all .2s ease-in-out;
+    -webkit-transition:all .2s ease-in-out;
     transition:all .2s ease-in-out;
+
+    -moz-transform:translate3d(0, 0, 0) rotate(0deg);
+    -webkit-transform:translate3d(0, 0, 0) rotate(0deg);
     transform:translate3d(0, 0, 0) rotate(0deg);
 }
 #slide-btn .top-bar {top: 0px;}
 #slide-btn .mid-bar {top: 9px;}
 #slide-btn .bot-bar {bottom:0;}
-.slide-out .top-bar {transform: translate3d(0, 9px, 0) rotate(45deg) !important;}
+.slide-out .top-bar {
+    -moz-transform: translate3d(0, 9px, 0) rotate(45deg) !important;
+    -webkit-transform: translate3d(0, 9px, 0) rotate(45deg) !important;
+    transform: translate3d(0, 9px, 0) rotate(45deg) !important;
+}
 .slide-out .mid-bar {opacity: 0; !important;}
-.slide-out .bot-bar {transform: translate3d(0, -9px, 0) rotate(-45deg) !important;}
+.slide-out .bot-bar {
+    -moz-transform: translate3d(0, -9px, 0) rotate(-45deg) !important;
+    -webkit-transform: translate3d(0, -9px, 0) rotate(-45deg) !important;
+    transform: translate3d(0, -9px, 0) rotate(-45deg) !important;
+}
 
 #slide-menu {
     position: fixed;
@@ -202,8 +239,11 @@ header > .container {padding-left: 10px;z-index: 200;}
     border-top:5px solid #8dc63f;
     background: #3d4351;
 
+    -moz-transition: all .7s cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-transition: all .7s cubic-bezier(0.23, 1, 0.32, 1);
     transition: all .7s cubic-bezier(0.23, 1, 0.32, 1);
-    z-index: 150; /* Should be higher than header */
+
+    z-index: 2000; /* Should be higher than header */
 }
 #slide-menu hr {
     position:relative;
@@ -218,6 +258,8 @@ header > .container {padding-left: 10px;z-index: 200;}
     -webkit-box-shadow: 0 5px 5px 0px #333;
     box-shadow: 0 5px 5px 0px #333;
 
+    -moz-transform: translate3d(-160px, 0, 0);
+    -webkit-transform: translate3d(-160px, 0, 0);
     transform: translate3d(-160px, 0, 0);
 }
 
