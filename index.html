@@ -43,7 +43,7 @@
                     <a href="https://www.linkedin.com/pub/farhankhan-daya/47/50b/593"><i class="fa fa-linkedin"></i></a>
                     <a href="files/resume.pdf"><i class="fa fa-file-o"></i> Resume</a>
 
-                    <div class="mobile-lg slide-btn">
+                    <div id="slide-btn" class="mobile-lg">
                         <span class="top-bar"></span>
                         <span class="mid-bar"></span>
                         <span class="bot-bar"></span>
@@ -91,28 +91,26 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
         <script>
             jQuery(function($) {
-                $('.slide-btn').click(function() {
+                $('#slide-btn').click(function() {
                     var menu = document.getElementById('slide-menu'),
                         $menu = $('#slide-menu');
-                        // slideOut = new TweenMax(menu, .25, {right:"-"+menu.offsetWidth}),
-                        // slideIn = new TweenMax(menu, .25, {right:"0"});
 
                     $menu.toggleClass('slide-out');
 
                     if($('#slide-menu').hasClass('slide-out')) {
                         TweenMax.killAll();
-                        TweenMax.to(menu, .25, {right:"0"});
+                        TweenMax.to(menu, .4, {right:"0"});
 
                         $('body').on('click',':not(#slide-menu, #slide-menu *, header, header *)', function() {
                             $menu.removeClass('slide-out');
                             TweenMax.killAll();
-                            TweenMax.to(menu, .25, {right: "-"+menu.offsetWidth});
+                            TweenMax.to(menu, .4, {right: "-"+menu.offsetWidth});
                         });
                     }
                     else {
                         $('body').off('click',':not(#slide-menu, #slide-menu *, header, header *)');
                         TweenMax.killAll();
-                        TweenMax.to(menu, .25, {right: "-"+menu.offsetWidth});
+                        TweenMax.to(menu, .4, {right: "-"+menu.offsetWidth});
                     }
                 });
 

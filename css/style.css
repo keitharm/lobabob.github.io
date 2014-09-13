@@ -160,7 +160,7 @@ header > .container {padding-left: 10px;z-index: 200;}
     color: #fff;
 }
 
-.slide-btn {
+#slide-btn {
     float: right;
 
     width:40px;
@@ -169,25 +169,26 @@ header > .container {padding-left: 10px;z-index: 200;}
     padding:5px;
     margin:10px -2px 0 15px;
 
+    cursor: pointer;
     text-decoration: none;
     color: #ccc;
     
     background:#8dc63f;
 }
-.slide-btn > .top-bar, .slide-btn > .mid-bar, .slide-btn > .bot-bar {
+#slide-btn > .top-bar, #slide-btn > .mid-bar, #slide-btn > .bot-bar {
     width:;
     height:;
     transition: all .25s;
     background:;
     border-radius:;
 }
-.slide-btn > .top-bar {
+#slide-btn > .top-bar {
     
 }
-.slide-btn > .mid-bar {
+#slide-btn > .mid-bar {
     
 }
-.slide-btn > .bot-bar {
+#slide-btn > .bot-bar {
     
 }
 
