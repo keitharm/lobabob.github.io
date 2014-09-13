@@ -202,6 +202,7 @@ header > .container {padding-left: 10px;z-index: 200;}
     border-top:5px solid #8dc63f;
     background: #3d4351;
 
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
     z-index: 150; /* Should be higher than header */
 }
 #slide-menu hr {
@@ -216,6 +217,8 @@ header > .container {padding-left: 10px;z-index: 200;}
     -moz-box-shadow: 0 5px 5px 0px #333;
     -webkit-box-shadow: 0 5px 5px 0px #333;
     box-shadow: 0 5px 5px 0px #333;
+
+    transform: translate3d(-160px, 0, 0);
 }
 
 

@@ -87,8 +87,8 @@
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="js/jquery.panelSnap.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+        <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>-->
         <script>
             jQuery(function($) {
                 $('#slide-btn').click(function() {
@@ -98,19 +98,19 @@
                     $menu.toggleClass('slide-out');
 
                     if($('#slide-menu').hasClass('slide-out')) {
-                        TweenMax.killAll();
-                        TweenMax.to(menu, .7, {right:"0",ease:Circ.easeOut,z:.1});
+                        //TweenMax.killAll();
+                        //TweenMax.to(menu, .7, {right:"0",ease:Circ.easeOut});
 
                         $('body').on('click',':not(#slide-menu, #slide-menu *, header, header *)', function() {
                             $menu.removeClass('slide-out');
-                            TweenMax.killAll();
-                            TweenMax.to(menu, .7, {right: "-"+menu.offsetWidth,ease:Circ.easeOut,z:.1});
+                            //TweenMax.killAll();
+                            //TweenMax.to(menu, .7, {right: "-"+menu.offsetWidth,ease:Circ.easeOut});
                         });
                     }
                     else {
                         $('body').off('click',':not(#slide-menu, #slide-menu *, header, header *)');
-                        TweenMax.killAll();
-                        TweenMax.to(menu, .7, {right: "-"+menu.offsetWidth,ease:Circ.easeOut,z:.1});
+                        //TweenMax.killAll();
+                        //TweenMax.to(menu, .7, {right: "-"+menu.offsetWidth,ease:Circ.easeOut});
                     }
                 });
 
