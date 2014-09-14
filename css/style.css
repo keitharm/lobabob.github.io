@@ -297,6 +297,7 @@ section {
 
 @media all and (max-width: 767px) {
     .mobile-md {display:initial !important;}
+    br.mobile-md {display:block !important;}
     .name {margin-top:6px;}
 }
 
