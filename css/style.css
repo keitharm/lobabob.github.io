@@ -293,16 +293,25 @@ section {
 @media all and (max-width: 930px) {
     .mobile-lg {display:initial !important;}
     .vertical-divider, header nav a:not([href^="#"]) {display:none;}
+
+    /* For IE */
+    div.mobile-lg {display:block !important;}
+    span.mobile-lg {display:inline !important;}
 }
 
 @media all and (max-width: 767px) {
     .mobile-md {display:initial !important;}
-    br.mobile-md {display:block !important;}
     .name {margin-top:6px;}
+
+    /* For IE */
+    br.mobile-md {display:block !important;}
 }
 
 @media all and (max-width: 640px) {
     .mobile-sm {display:initial !important;}
     header nav a {display:none;}
     #slide-menu hr {display:block !important;}
+
+    /* For IE */
+    span.mobile-sm {display:inline !important;}
 }
