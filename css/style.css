@@ -91,13 +91,13 @@ nav a:not(.active):hover {
 }
 
 .vertical-divider {
-    position: absolute;
-    top:5%;
-    right:217px;
+    float:left;
+    margin-top:3px;
     height:90%;
+    width:0px;
+    
     border-right:1px solid #1b212f;
     border-left:1px solid #5f6573;
-    width:0px;
 }
 .right-divider {margin-left:12px;}
 
