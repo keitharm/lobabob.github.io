@@ -45,6 +45,7 @@ nav {
 }
 header nav {
     float: right;
+    max-width:522px;
     padding-right:12px;
 }
 #slide-menu nav {
