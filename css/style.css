@@ -4,6 +4,8 @@
 }
 
 .clear {clear:both;}
+.right {float:right;}
+.left {float:left;}
 
 body {
     font-family: helvetica;
@@ -44,8 +46,7 @@ nav {
     height: 100%;
 }
 header nav {
-    float: right;
-    max-width:522px;
+    /*max-width:522px;*/
     padding-right:12px;
 }
 #slide-menu nav {
@@ -93,14 +94,13 @@ nav a:not(.active):hover {
 
 .vertical-divider {
     float:left;
-    margin-top:3px;
+    margin:3px 0 0 5px;
     height:90%;
     width:0px;
     
     border-right:1px solid #1b212f;
     border-left:1px solid #5f6573;
 }
-.right-divider {margin-left:12px;}
 
 .overlay::after {
     content: "";
@@ -174,8 +174,6 @@ header > .container {padding-left: 10px;z-index: 1500;}
 }
 
 #slide-btn {
-    float: right;
-
     width:50px;
     height:50px;
 
