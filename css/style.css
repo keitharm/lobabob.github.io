@@ -47,7 +47,7 @@ nav {
     height: 100%;
 }
 nav::after {content:"";display:table;clear:both;}
-header nav {padding-right:5px;}
+header nav {padding-right:5px;width:527px;}
 #slide-menu nav {
     z-index:2500;
     width:100%;
@@ -298,6 +298,7 @@ section {
 @media all and (max-width: 930px) {
     .mobile-lg {display:initial !important;}
     .vertical-divider, header nav a:not([href^="#"]) {display:none;}
+    header nav{width:376px;}
 
     /* For IE */
     div.mobile-lg {display:block !important;}
@@ -315,6 +316,7 @@ section {
 @media all and (max-width: 640px) {
     .mobile-sm {display:initial !important;}
     header nav a {display:none;}
+    header nav {width:65px;}
     #slide-menu hr {display:block !important;}
 
     /* For IE */
