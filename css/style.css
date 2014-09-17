@@ -47,7 +47,7 @@ nav {
     height: 100%;
 }
 nav::after {content:"";display:table;clear:both;}
-header nav {padding-right:5px;width:527px;}
+header nav {padding-right:5px;width:530px;}
 #slide-menu nav {
     z-index:2500;
     width:100%;
@@ -298,7 +298,7 @@ section {
 @media all and (max-width: 930px) {
     .mobile-lg {display:initial !important;}
     .vertical-divider, header nav a:not([href^="#"]) {display:none;}
-    header nav{width:376px;}
+    header nav{width:379px;}
 
     /* For IE */
     div.mobile-lg {display:block !important;}
