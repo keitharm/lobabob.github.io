@@ -37,14 +37,14 @@
                 </div>
                 
                 <nav class="right">
-                    <a href="#about" class="active" data-panel="about">About Me</a>
-                    <a href="#projects" data-panel="projects">Projects</a>
-                    <a href="#contact" data-panel="contact">Contact Me</a>
+                    <a href="#about">About Me</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact Me</a>
 
                     <!-- <div class="vertical-divider"></div> -->
 
-                    <a href="https://github.com/lobabob"><i class="fa fa-github"></i></a>
-                    <a href="https://www.linkedin.com/pub/farhankhan-daya/47/50b/593"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://github.com/lobabob" title="Github"><i class="fa fa-github-alt"></i></a>
+                    <a href="https://www.linkedin.com/pub/farhankhan-daya/47/50b/593" title="Linkedin"><i class="fa fa-linkedin"></i></a>
                     <a href="files/masterResume.pdf"><i class="fa fa-file-o"></i> Resume</a>
 
                     <div id="slide-btn" class="right mobile-lg">
@@ -55,36 +55,35 @@
                         </div>
                     </div>
                 </nav>
-                <div class="clear"></div>
             </div>
         </header>
         <div id="slide-menu" class="mobile-lg overlay">
             <nav>
                 <span class="mobile-sm">
-                    <a href="#about" class="active" data-panel="about">About Me</a>
-                    <a href="#projects" data-panel="projects">Projects</a>
-                    <a href="#contact" data-panel="contact">Contact Me</a>  
+                    <a href="#about">About Me</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact Me</a>  
                 </span>
 
                 <hr class="mobile-sm">
 
                 <span class="mobile-lg">
-                    <a href="https://github.com/lobabob"><i class="fa fa-github"></i> Github</a>
+                    <a href="https://github.com/lobabob"><i class="fa fa-github-alt"></i> Github</a>
                     <a href="https://www.linkedin.com/pub/farhankhan-daya/47/50b/593"><i class="fa fa-linkedin"></i> Linkedin</a>
                     <a href="files/masterResume.pdf"><i class="fa fa-file-o"></i> Resume</a>
                 </span>
             </nav>
         </div>
         
-        <section id="about" data-panel="about">
+        <section id="about">
             <div class="container">aadsfasdfasdf</div>
         </section>
 
-        <section id="projects" data-panel="projects">
+        <section id="projects">
             <div class="container">bfdafdasfda</div>
         </section>
 
-        <section id="contact" data-panel="contact">
+        <section id="contact">
             <div class="container"><a href="tel:+18005550199">1-800-555-0199</a></div>
         </section>
 
@@ -94,15 +93,30 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>
             jQuery(function($) {
+                // Handles correct nav display if loading straight into an internal link
+                if(document.location.hash != "")
+                    $("nav a[href='"+document.location.hash+"']").addClass('active');
+                else
+                    $("nav a[href='#about']").addClass('active');
+
+                // Switches nav display if scrolled to a different section
+                $(window).scroll(function() {
+                    var max = 0;
+                    var $active;
+
+                    $('section').each(function() {
+                        var top = $(this).position().top;
+                        if(top <= $(window).scrollTop()+80 && top > max)
+                            $active = $(this);
+                    });
+
+                    $('nav a.active').removeClass('active');
+                    $('nav a[href="#'+$active[0].id+'"]').addClass('active');
+                });
+
+                // Smooth Scrolls to section from nav click
                 $('a[href^="#"]').on('click',function (e) {
                     e.preventDefault();
-
-                    if(!$(this).hasClass('active')) {
-                        $('.active').removeClass('active');
-                        $('a[href="'+this.hash+'"]').addClass('active');
-                    }
-                        
-
                     $target = $(this.hash);
 
                     $('html, body').stop().animate({
@@ -119,14 +133,13 @@
 
                     $slide.toggleClass('slide-out');
 
-                    if($slide.hasClass('slide-out')) {
+                    // Close slide-menu from clicking outside of the menu
+                    if($slide.hasClass('slide-out'))
                         $('body').on('click',':not(#slide-menu, #slide-menu *, header, header *)', function() {
-                            $slide.removeClass('slide-out');    // Close slide-menu from clicking outside menu
+                            $slide.removeClass('slide-out');
                         });
-                    }
-                    else {
+                    else
                         $('body').off('click',':not(#slide-menu, #slide-menu *, header, header *)');
-                    }
                 });
             });
         </script>

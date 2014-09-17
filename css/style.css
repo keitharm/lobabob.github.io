@@ -16,9 +16,11 @@ body {
     min-width: 100%;
 }
 
-section:nth-of-type(even) {
-    background-color: #f9f9f9;
-}
+/*section {
+    padding:20px 0;
+}*/
+section:nth-of-type(even) {background-color: #f9f9f9;}
+
 footer {
     height:60px;
     width:100%;
@@ -45,10 +47,7 @@ nav {
     position: relative;
     height: 100%;
 }
-header nav {
-    /*max-width:522px;*/
-    padding-right:12px;
-}
+header nav {padding-right:12px;}
 #slide-menu nav {
     z-index:2500;
     width:100%;
