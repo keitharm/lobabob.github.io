@@ -109,7 +109,7 @@ nav a:not(.active):hover {
     opacity: .15;
     background-image: url("../img/texture-overlay.png");
 }
-header.overlay:after {height:75px;}
+header.overlay:after {height:70px;}
 
 .fa {font-size:30px;}
 
@@ -120,6 +120,10 @@ header.overlay:after {height:75px;}
     max-width: 960px;
     margin: 0 auto;
     height: 100%;
+}
+.container::after {
+    content:"";
+    clear:both;
 }
 header > .container {
     padding-left: 10px;
