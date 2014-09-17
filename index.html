@@ -100,7 +100,8 @@
                     $("nav a[href='#about']").addClass('active');
 
                 // Fix for chrome float handling
-                $('header nav').css('display','none').css('display','block');
+                $('header nav').css('display','none');
+                $('header nav').css('display','block');
 
                 // Switches nav display if scrolled to a different section
                 $(window).scroll(function() {
