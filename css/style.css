@@ -1,3 +1,9 @@
+/* FOR TESTING PURPOSES */
+section {
+    min-height:820px;
+}
+/***********************/
+
 ::selection {
     color: #000;
     background-color: #8dc63f;
@@ -255,22 +261,7 @@ header > .container {
 }
 
 
-
-
-
-/* for testing */
-html,body {height:100%;}
-section {
-    /*min-height: 600px;*/
-    height: calc(100%);
-}
-
-
-
-
 /********************************* Viewport styling *********************************/
-
-
 
 .mobile-lg, .mobile-md, .mobile-sm {
     display:none;
