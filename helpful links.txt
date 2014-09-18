@@ -17,3 +17,10 @@ http://lisher.net/          <---- Good website examples
 http://designm.ag/designer-showcase/200-portfolio-sites-webdesign-inspiration/
 http://haraldurthorleifsson.com/ <---- Has name in navbar
 
+
+UT CS STUDENT WEBSITES THAT AREN'T EMPTY OR CRAP (Most are just templates)
+
+https://www.cs.utexas.edu/~cbaack/#page-top
+http://alexcoomans.com/
+http://tcorley.info/index.html
+
