@@ -44,13 +44,13 @@
 .proj-item span:nth-child(2), .proj-item span:nth-child(2) img {bottom:0;}
 .proj-item span:nth-child(2) img {margin-top:-50%;}
 
-.proj-item:hover span:nth-child(1) {
+.proj-item:hover span:nth-child(1), .proj-item:focus span:nth-child(1) {
     -o-transform: translate(0, -30px);
     -moz-transform: translate(0, -30px);
     -webkit-transform: translate(0, -30px);
     transform: translate(0, -30px);
 }
-.proj-item:hover span:nth-child(2) {
+.proj-item:hover span:nth-child(2), .proj-item:focus span:nth-child(2) {
     -o-transform: translate(0, 30px);
     -moz-transform: translate(0, 30px);
     -webkit-transform: translate(0, 30px);
