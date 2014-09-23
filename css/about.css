@@ -5,14 +5,16 @@
     border:2px solid #8dc63f;
     box-sizing:initial;
 
-    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -o-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 .profile > img {
     border:5px solid #fff;
 }
 .profile, .profile > img {
+    -o-border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;

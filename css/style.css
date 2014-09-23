@@ -27,11 +27,20 @@ body {
 hr {width:90%; margin:0 auto;}
 
 section {position:relative;padding:20px 0;}
-section:nth-of-type(odd) {background-color: #f9f9f9;}
+section:nth-of-type(odd) {background-color: #e8e8e8;}
+section:nth-of-type(even) {background-color: ;}
 
 footer {
     height:60px;
     width:100%;
+
+    line-height:60px;
+    text-align:center;
+
+    border-top:5px solid #7cb52e;
+    font-size:18px;
+    background:#3d4351;
+    color:#7cb52e;
 }
 
 header {
@@ -40,6 +49,7 @@ header {
     width: 100%;
     height: 75px;
 
+    -o-box-shadow: 0 1px 5px 0px #333;
     -moz-box-shadow: 0 1px 5px 0px #333;
     -webkit-box-shadow: 0 1px 5px 0px #333;
     box-shadow: 0 1px 5px 0px #333;
@@ -48,7 +58,8 @@ header {
     clear: both;
     z-index: 1000;
 
-    border-top:5px solid #8dc63f;
+    /*border-top:5px solid #8dc63f;*/
+    border-top:5px solid #7cb52e;
 }
 
 nav {
@@ -67,6 +78,7 @@ nav a {
 
     padding:5px;
 
+    -o-border-radius:5px;
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     border-radius:5px;
@@ -77,22 +89,26 @@ nav a {
 }
 header nav a {margin: 20px 0px 0px 5px;}
 header nav a:not([href^="#"]) {margin-top:15px;}
-#slide-menu nav a {margin: 10px 0 0 5%; width:84%;}
+#slide-menu nav a {margin: 10px 0 0 5%; width:90%;}
 
 header nav a.active {margin-top: 19px;}
 nav a.active {
     padding:5px;
-    background: #8dc63f;
+    /*background: #8dc63f;*/
+    background: #7cb52e;
     font-weight:bold;
-    color: #444;
+    color: #3d4351;
 }
 nav a:not(.active):hover {
-    color: #8dc63f;
+    /*color: #8dc63f;*/
+    color:#7cb52e;
 
+    -o-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.1);
     -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.1);
 
+    -o-transition: all .25s;
     -moz-transition: all .25s;
     -webkit-transition: all .25s;
     transition: all .25s;
@@ -159,10 +175,12 @@ header > .container {
     font-size: 29px;
     letter-spacing: 3px;
 
+    -o-text-shadow:0 1px 3px rgba(0, 0, 0, 0.5);
     -moz-text-shadow:0 1px 3px rgba(0, 0, 0, 0.5);
     -webkit-text-shadow:0 1px 3px rgba(0, 0, 0, 0.5);
     text-shadow:0 1px 3px rgba(0, 0, 0, 0.5);
 
+    -o-transition: all .25s;
     -moz-transition: all .25s;
     -webkit-transition: all .25s;
     transition: all .25s;
@@ -189,6 +207,7 @@ header > .container {
 
     margin:15px auto 0 auto;
 
+    -o-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -199,14 +218,17 @@ header > .container {
     height:3px;
     background:#3d4351;
 
+    -o-border-radius:1px;
     -moz-border-radius:1px;
     -webkit-border-radius:1px;
     border-radius:1px;
 
+    -o-transition:all .2s ease-in-out;
     -moz-transition:all .2s ease-in-out;
     -webkit-transition:all .2s ease-in-out;
     transition:all .2s ease-in-out;
 
+    -o-transform:translate3d(0, 0, 0) rotate(0deg);
     -moz-transform:translate3d(0, 0, 0) rotate(0deg);
     -webkit-transform:translate3d(0, 0, 0) rotate(0deg);
     transform:translate3d(0, 0, 0) rotate(0deg);
@@ -215,12 +237,14 @@ header > .container {
 #slide-btn .mid-bar {top: 9px;}
 #slide-btn .bot-bar {bottom:0;}
 .slide-out .top-bar {
+    -o-transform: translate3d(0, 9px, 0) rotate(45deg) !important;
     -moz-transform: translate3d(0, 9px, 0) rotate(45deg) !important;
     -webkit-transform: translate3d(0, 9px, 0) rotate(45deg) !important;
     transform: translate3d(0, 9px, 0) rotate(45deg) !important;
 }
 .slide-out .mid-bar {opacity: 0; !important;}
 .slide-out .bot-bar {
+    -o-transform: translate3d(0, -9px, 0) rotate(-45deg) !important;
     -moz-transform: translate3d(0, -9px, 0) rotate(-45deg) !important;
     -webkit-transform: translate3d(0, -9px, 0) rotate(-45deg) !important;
     transform: translate3d(0, -9px, 0) rotate(-45deg) !important;
@@ -236,6 +260,7 @@ header > .container {
     border-top:5px solid #8dc63f;
     background: #3d4351;
 
+    -o-transition: all .7s cubic-bezier(0.23, 1, 0.32, 1);
     -moz-transition: all .7s cubic-bezier(0.23, 1, 0.32, 1);
     -webkit-transition: all .7s cubic-bezier(0.23, 1, 0.32, 1);
     transition: all .7s cubic-bezier(0.23, 1, 0.32, 1);
@@ -251,10 +276,12 @@ header > .container {
 }
 
 .slide-out #slide-menu {
+    -o-box-shadow: 0 5px 5px 0px #333;
     -moz-box-shadow: 0 5px 5px 0px #333;
     -webkit-box-shadow: 0 5px 5px 0px #333;
     box-shadow: 0 5px 5px 0px #333;
 
+    -o-transform: translate3d(-160px, 0, 0);
     -moz-transform: translate3d(-160px, 0, 0);
     -webkit-transform: translate3d(-160px, 0, 0);
     transform: translate3d(-160px, 0, 0);

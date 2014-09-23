@@ -17,6 +17,7 @@ http://lisher.net/          <---- Good website examples
 http://designm.ag/designer-showcase/200-portfolio-sites-webdesign-inspiration/
 http://haraldurthorleifsson.com/ <---- Has name in navbar
 
+how to remove "jumping issue" when going from relative <--> fixed -----> http://css-tricks.com/scroll-fix-content/
 
 UT CS STUDENT WEBSITES THAT AREN'T EMPTY OR CRAP (Most are just templates)
 
@@ -24,3 +25,21 @@ https://www.cs.utexas.edu/~cbaack/#page-top
 http://alexcoomans.com/
 http://tcorley.info/index.html
 
+get potential project images from dribbble?
+
+http://andreaballerino.com/ <------ Has good example of portfolio effect
+change gridism collapse width to the same as ^
+
+about me section like this guy: http://ismet.me/about.html
+
+Remove contact section, do contact part like this guy did: http://ismet.me/about.html
+contact me button should have arrow in right margin (like this: [Contact me ->])
+
+Flatened overlayed screenshots like this: http://ismet.me/work.html for some project images
+
+For more portfolio examples
+-onepagelove.com 
+-http://www.smashingmagazine.com/2009/07/01/best-practices-for-effective-design-of-about-us-pages/
+
+
+LOOK AT THIS ONE FOR BEST OVERALL PORTFOLIO EXAMPLE: http://jasonweaver.name/

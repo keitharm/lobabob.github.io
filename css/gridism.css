@@ -2,6 +2,8 @@
  * Gridism
  * A simple, responsive, and handy CSS grid by @cobyism
  * https://github.com/cobyism/gridism
+ *
+ * Modified by: Farhankhan Daya;
  */
 
 /* Preserve some sanity */
@@ -89,6 +91,21 @@
    becomes smaller */
 .unit img {
   max-width: 100%;
+}
+
+/* Responsive Stuff */
+@media screen and (max-width: 897px) {
+  /* Stack anything that isn’t full-width on smaller screens 
+     and doesn't provide the no-stacking-on-mobiles class */
+  #projects .grid:not(.no-stacking-on-mobiles) > .unit {
+    width: 100% !important;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #projects .unit .grid .unit {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 /* Responsive Stuff */
