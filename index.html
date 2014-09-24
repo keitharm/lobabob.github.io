@@ -43,7 +43,7 @@
 
                     <a href="https://github.com/lobabob" title="Github"><i class="fa fa-github-alt"></i></a>
                     <a href="https://www.linkedin.com/pub/farhankhan-daya/47/50b/593" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-                    <a href="files/resume.pdf"><i class="fa fa-file-o"></i> Resume</a>
+                    <a href="files/resume.pdf"><i class="fa fa-file-pdf-o"></i> Resume</a>
 
                     <div id="slide-btn" class="right mobile-lg">
                         <div>
@@ -68,7 +68,7 @@
                 <span class="mobile-lg">
                     <a href="https://github.com/lobabob"><i class="fa fa-github-alt"></i> Github</a>
                     <a href="https://www.linkedin.com/pub/farhankhan-daya/47/50b/593"><i class="fa fa-linkedin"></i> Linkedin</a>
-                    <a href="files/resume.pdf"><i class="fa fa-file-o"></i> Resume</a>
+                    <a href="files/resume.pdf"><i class="fa fa-file-pdf-o"></i> Resume</a>
                 </span>
             </nav>
         </div>
@@ -80,29 +80,68 @@
                         <div class="profile"><img src="img/head.png"></div>
                     </div>
                     <div class="unit two-thirds">
-                        <h1>Hi. I'm <b>Farhankhan Daya</b>.</h1>
-                        <p>I'm a student at UT Austin that's currently pursuing a Bachelors Degree in <b>Computer Science</b>. I love learning about and experimenting with new things, especially if they involve coding.</p>
+                        <h1>Hi. I'm <strong>Farhankhan Daya</strong>.</h1>
+                        <p>I'm a student at UT Austin that's currently pursuing a Bachelors Degree in <strong>Computer Science</strong>. I love learning about and experimenting with new things, especially if they involve coding.</p>
                     </div>
                 </div>
             </div>
+
             <hr>
+
             <div class="container">
                 <div class="grid">
-                    <div class="unit whole">
-                        <p>Blah blah blah blah! Blahblahblah Blah Blah! Blah blah blah blah! Blahblahblah Blah Blah! 
-                        Blah blah blah blah! Blahblahblah Blah Blah! Blah blah blah blah! Blahblahblah Blah Blah!
-                        Blah blah blah blah! Blahblahblah Blah Blah! Blah blah blah blah! Blahblahblah Blah Blah!
-                        Blah blah blah blah! Blahblahblah Blah Blah! Blah blah blah blah! Blahblahblah Blah Blah!</p>
+                    <div class="unit half skills">
+                        <h2>Skills</h2>
+                        <ul class="skills-legend">
+                            <li><span>What's<br>that?</span></li>
+                            <li><span>Basic</span></li>
+                            <li><span>Medium</span></li>
+                            <li><span>Pretty<br>good</span></li>
+                            <li><span>Grand<br>Master</span></li>
+                        </ul>
+                        <ul class="skills-data">
+                            <li>
+                                <h3>Java</h3>
+                                <progress value="70" max="100"></progress>
+                                <div class="scale"></div>
+                            </li>
+                            <li>
+                                <h3>C</h3>
+                                <progress value="60" max="100"></progress>
+                            </li>
+                            <li>
+                                <h3>Python</h3>
+                                <progress value="43" max="100"></progress>
+                            </li>
+                            <li>
+                                <h3>Javascript</h3>
+                                <progress value="47" max="100"></progress>
+                            </li>
+                            <li>
+                                <h3>PHP</h3>
+                                <progress value="55" max="100"></progress>
+                            </li>
+                            <li>
+                                <h3>HTML &amp; CSS</h3>
+                                <progress value="85" max="100"></progress>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="unit half experience">
+                        <h2>Experience</h2>
                     </div>
                 </div>
             </div>
         </section>
+
+        <hr>
 
         <section id="projects">
             <div class="container">
                 <div class="grid">
                     <div class="unit whole">
                         <h2>Some stuff I've worked on</h2>
+                        <div class="alert alert-info"><strong>Hey You!</strong> Try hovering/tapping the project thumbnails to see something neat! <strong>The surprise is clickable.</strong></div>
                     </div>
                 </div>
 
@@ -150,11 +189,13 @@
             </div>
         </section>
 
+        <hr>
+
         <section id="contact">
             <div class="container">
                 <div class="grid">
                     <div class="unit whole">
-                        <p style="text-align:center">Disclaimer: The Contact Me page is still under construction, as is the rest of this website. <b>You can get my contact info from the resume link.</b></p>
+                        <p style="text-align:center;margin-top:35%;">Disclaimer: The Contact Me page is still under construction, as is the rest of this website. <b>You can get my contact info from the resume link.</b></p>
                     </div>
                 </div>
             </div>
@@ -193,9 +234,7 @@
 
                     $('html, body').stop().animate({
                         'scrollTop':$target.offset().top-75
-                    }, 350, 'swing', function() {
-                        window.location.hash = $target.selector;
-                    });
+                    }, 350, 'swing');
                 });
 
 

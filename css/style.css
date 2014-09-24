@@ -2,6 +2,21 @@
 section {
     min-height:820px;
 }
+section:last-child {
+    height:100%;
+}
+
+h2 {
+    display:table;
+    margin:20px auto;
+    padding-bottom:5px;
+    border-bottom:2px solid #2e2e2e;
+    
+    color: #2e2e2e;
+    font-family:'Montserrat', sans-serif;
+    font-size: 25px;
+    text-transform:uppercase;
+}
 /***********************/
 
 ::selection {
@@ -15,6 +30,29 @@ section {
 .right {float:right;}
 .left {float:left;}
 
+/* From Bootstrap */
+.alert {
+    padding: 15px;
+    margin-bottom:20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    line-height:1.3;
+}
+
+.alert-info {
+    color:#31708f;
+    background-color:#d9edf7;
+    border-color:#bce8f1;
+}
+
+.alert-warning {
+    color: #8a6d3b;
+    background: #fcf8e3;
+    border-color:#faebcc;
+}
+
+/* End of bootstrap css */
+
 body {
     font-family: helvetica, 'Open Sans', sans-serif;
     background-color: #fff;
@@ -27,8 +65,8 @@ body {
 hr {width:90%; margin:0 auto;}
 
 section {position:relative;padding:20px 0;}
-section:nth-of-type(odd) {background-color: #e8e8e8;}
-section:nth-of-type(even) {background-color: ;}
+/*section:nth-of-type(odd) {background-color: #e8e8e8;}
+section:nth-of-type(even) {background-color: ;}*/
 
 footer {
     height:60px;
