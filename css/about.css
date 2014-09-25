@@ -37,13 +37,19 @@
     max-width:650px;
 }
 #about b {color:#222;}
+#about hr:nth-child(2) {margin-bottom:20px;}
+#about p {
+    color:#444;
+    line-height:1.5;
+    font-size:20px;
+}
 
 /* Almost all of this h2 block is redundant. Most of this is already in the
  * test block at the top of style.css
  */
-#about h2 {
+.skills h2 {
     display:inline-block;
-    margin:80px 0 20px;
+    margin:80px 0 60px;
     padding-bottom:5px;
     border-bottom:2px solid #2e2e2e;
     
@@ -62,19 +68,23 @@
     position:absolute;
     width:100%;
     height:100%;
+    top:-70px;
 }
 .skills-legend li {
     list-style-type:none;
     float:left;
     margin-top:50px;
     width:18%;
-    height:100%;
+    height:130%;
     border-right:1px solid rgba(80,80,80,.6);
 }
 .skills-legend span {
     float:right;
-    /*font-size:12px;*/
-    margin-top:-40px;
+    text-align:right;
+    width:140px;
+    margin-top:-80px;
+    margin-right:-20px;
+    font-size:.95em;
 
     -o-transform:rotate(45deg);
     -moz-transform:rotate(45deg);
@@ -87,34 +97,62 @@
     margin-top:70px;    /* Equal to height of skills-legend column labels */
     padding:15px 0 1px 0;
     border-left:2px solid #2e2e2e;
+    width:100%;
 }
 .skills-data li {
     list-style-type:none;
     margin-bottom:30px; /*30px when progress bar is height:16px*/
 }
-.skills-data li h3 {
-    float:left;
-    font-size:15px;
-    padding-left:5px;
-    margin-bottom:-2px; /* Only for when prog bar is height:5px;*/
+.skills-data div {
+    position:relative;
+    display:inline-block;
+    vertical-align: -.2em;
+    background:#3d4351;
+
+    padding:5px;
+    line-height:25px;
+    font-size:20px;
+    color:#8dc63f;
+
+    height:40px;
+    border-top:10px solid #5e6573;      /* Lighter than bg */
+    border-right: 10px solid #1b212f;   /* Darker than bg */
 }
-.skills-data progress {
+.skills-data div::after {
+    content:"";
+    position:absolute;
+    bottom:-10px;
+    right:-10px;
+    width:0;
+    height:0;
+    border-top: 10px solid #1b212f;     /* Darker than bg */
+    border-right:10px solid transparent;
+}
+.skills-data div::before {
+    content:"";
+    position:absolute;
+    bottom:-10px;
     width:100%;
     height:10px;
-}
-.skills-data progress:: {
-
-}
-.skills-data progress:: {
-
+    margin-left:-5px;
+    background:#3d4351;
 }
 
+/*.experience ul {margin-top:40px;}
 
+.experience li {
+    list-style-type:none;
+    padding-bottom:10px;
+    margin-bottom:20px;
+    border-bottom:1px solid #2e2e2e;
+}*/
+
+@media all and (max-width: 640px) {
+    .skills-legend span {font-size:.8em;}
+}
 
 @media all and (max-width: 568px) {
-    .profile {
-        float:none;
-    }
+    .profile {float:none;}
 
     #about .intro div:nth-child(2) h1 {margin-left:10px;}
     #about .intro div:nth-child(2) p {margin-left:0px;}

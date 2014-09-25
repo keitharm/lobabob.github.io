@@ -9,15 +9,10 @@ http://manoscrafted.com/
 http://fortawesome.github.io/Font-Awesome/
 
 
-https://github.com/guidobouman/jquery-panelsnap
-
-
 https://www.geckoboard.com/ <---- Steal Color Scheme
 http://lisher.net/          <---- Good website examples
 http://designm.ag/designer-showcase/200-portfolio-sites-webdesign-inspiration/
 http://haraldurthorleifsson.com/ <---- Has name in navbar
-
-how to remove "jumping issue" when going from relative <--> fixed -----> http://css-tricks.com/scroll-fix-content/
 
 UT CS STUDENT WEBSITES THAT AREN'T EMPTY OR CRAP (Most are just templates)
 
@@ -43,3 +38,7 @@ For more portfolio examples
 
 
 LOOK AT THIS ONE FOR BEST CONTACT FORM FOR NOW: http://sergiopedercini.com/
+
+
+Questions I should answer with my about me:
+
