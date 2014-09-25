@@ -125,6 +125,7 @@ header nav {padding-right:5px;width:530px;}
     z-index:2500;
     width:100%;
 }
+nav a:hover {text-decoration: none;}
 nav a {
     display: block;
     float: left;
