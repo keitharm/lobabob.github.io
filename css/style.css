@@ -241,6 +241,7 @@ header > .container {
 
     color: #fff;
 }
+.name:hover {text-decoration:none;color:#fff;}
 
 #slide-btn {
     width:50px;
